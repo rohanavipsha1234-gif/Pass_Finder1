@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: passfinder-for-roblox
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/_healthcheck
+    autoDeploy: true
